@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZYRA — Feminine Luxury Cosmetics & Clean Beauty</title>
+  <meta name="description" content="Discover ZYRA Luxury Cosmetics. Clean, cruelty-free, high-performance makeup and skincare crafted with botanical elegance.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="assets/favicon-32x32.png" type="image/png">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="navbar">
+      <!-- Logo & Brand Name -->
+      <a href="index.html" class="brand-logo-link">
+        <img src="assets/logo.png" alt="ZYRA Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Navigation Menu -->
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="pages/products.html" class="nav-link">Products</a></li>
+        <li><a href="pages/about.html" class="nav-link">About Us</a></li>
+        <li><a href="pages/founder.html" class="nav-link">Founder</a></li>
+        <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Action Icons & Controls -->
+      <div class="nav-actions">
+        <button class="action-icon-btn theme-toggle-btn" aria-label="Toggle Theme">🌙</button>
+
+        <a href="pages/wishlist.html" class="action-icon-btn" aria-label="Wishlist">
+          ❤️ <span class="badge-count wishlist-badge">0</span>
+        </a>
+
+        <a href="pages/cart.html" class="action-icon-btn" aria-label="Cart">
+          🛒 <span class="badge-count cart-badge">0</span>
+        </a>
+
+        <a href="pages/login.html" class="action-icon-btn user-action-btn" aria-label="Login / Account">
+          👤
+        </a>
+
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="eyebrow">Botanical Elegance</div>
+        <h1>Redefine Your <span>Radiance</span> With Luxury Clean Beauty</h1>
+        <p class="hero-desc">Indulge in ultra-pigmented lipsticks, luminous silk foundations, and botanical serums formulated for timeless skin health and effortless glow.</p>
+        <div class="hero-btns">
+          <a href="pages/products.html" class="btn btn-primary">Shop Now</a>
+          <a href="pages/products.html?category=Lipstick" class="btn btn-outline">Discover Collection</a>
+          <a href="pages/products.html?sort=newest" class="btn btn-ghost">Explore New Arrivals</a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <img src="assets/products/lipstick_rose.jpg" alt="ZYRA Velvet Rose Lipstick" class="hero-main-img" id="hero-img">
+        <div class="hero-badge-floating">
+          <span style="font-size: 1.8rem;">✨</span>
+          <div>
+            <strong style="display:block; font-size: 0.95rem;">100% Cruelty-Free</strong>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Clean Botanical Formulas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED CATEGORIES SHOWCASE -->
+  <section style="padding: 60px 0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="eyebrow">Explore Collections</div>
+        <h2 class="section-title">Shop By Beauty Category</h2>
+        <p class="section-subtitle">Curated cosmetics across 17 specialized categories tailored to your unique tone.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px;">
+        <a href="pages/products.html?category=Lipstick" class="product-card" style="text-align: center; padding: 24px;">
+          <span style="font-size: 2.5rem; display:block; margin-bottom: 10px;">💄</span>
+          <h3 style="font-size: 1.1rem; margin-bottom: 4px;">Lipsticks</h3>
+          <span style="font-size: 0.8rem; color: var(--rose-gold); font-weight: 600;">Velvet & Satin</span>
+        </a>
+
+        <a href="pages/products.html?category=Foundation" class="product-card" style="text-align: center; padding: 24px;">
+          <span style="font-size: 2.5rem; display:block; margin-bottom: 10px;">✨</span>
+          <h3 style="font-size: 1.1rem; margin-bottom: 4px;">Foundation</h3>
+          <span style="font-size: 0.8rem; color: var(--rose-gold); font-weight: 600;">Luminous Silk</span>
+        </a>
+
+        <a href="pages/products.html?category=Blush" class="product-card" style="text-align: center; padding: 24px;">
+          <span style="font-size: 2.5rem; display:block; margin-bottom: 10px;">🌸</span>
+          <h3 style="font-size: 1.1rem; margin-bottom: 4px;">Blush</h3>
+          <span style="font-size: 0.8rem; color: var(--rose-gold); font-weight: 600;">Soft Peony Glow</span>
+        </a>
+
+        <a href="pages/products.html?category=Eyeshadow" class="product-card" style="text-align: center; padding: 24px;">
+          <span style="font-size: 2.5rem; display:block; margin-bottom: 10px;">🎨</span>
+          <h3 style="font-size: 1.1rem; margin-bottom: 4px;">Eyeshadow</h3>
+          <span style="font-size: 0.8rem; color: var(--rose-gold); font-weight: 600;">12-Shade Palettes</span>
+        </a>
+
+        <a href="pages/products.html?category=Skincare" class="product-card" style="text-align: center; padding: 24px;">
+          <span style="font-size: 2.5rem; display:block; margin-bottom: 10px;">🌿</span>
+          <h3 style="font-size: 1.1rem; margin-bottom: 4px;">Skincare</h3>
+          <span style="font-size: 0.8rem; color: var(--rose-gold); font-weight: 600;">Botanical Elixirs</span>
+        </a>
+
+        <a href="pages/products.html?category=Brushes" class="product-card" style="text-align: center; padding: 24px;">
+          <span style="font-size: 2.5rem; display:block; margin-bottom: 10px;">🖌️</span>
+          <h3 style="font-size: 1.1rem; margin-bottom: 4px;">Brushes</h3>
+          <span style="font-size: 0.8rem; color: var(--rose-gold); font-weight: 600;">Luxury Sets</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BESTSELLERS GRID -->
+  <section style="padding: 60px 0; background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="eyebrow">Iconic Favorites</div>
+        <h2 class="section-title">Best Sellers & Featured</h2>
+        <p class="section-subtitle">Loved by makeup artists and skincare enthusiasts around the globe.</p>
+      </div>
+
+      <div class="products-grid" id="featured-products-grid">
+        <!-- Rendered via JavaScript from MySQL REST API -->
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE ZYRA & BRAND PROMISE -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="eyebrow">Our Philosophy</div>
+        <h2 class="section-title">Why Choose ZYRA?</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px;">
+        <div class="product-card" style="padding: 30px; text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 16px;">🌱</div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Clean Beauty</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Formulated without parabens, sulfates, synthetic fragrances, or harsh toxins.</p>
+        </div>
+
+        <div class="product-card" style="padding: 30px; text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 16px;">🐰</div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 10px;">100% Cruelty-Free</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">We never test on animals. Certified vegan and ethically harvested ingredients.</p>
+        </div>
+
+        <div class="product-card" style="padding: 30px; text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 16px;">💎</div>
+          <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Affordable Luxury</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Prestige beauty craftsmanship brought directly to you without luxury markups.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHADE FINDER / MATCH BANNER -->
+  <section style="padding: 60px 0; background: linear-gradient(135deg, var(--rose-gold-dark), var(--rose-gold)); color: #FFFFFF; text-align: center;">
+    <div class="container">
+      <div class="eyebrow" style="color: var(--blush); margin-bottom: 12px;">Personalized Beauty</div>
+      <h2 style="font-size: 2.8rem; color: #FFFFFF; margin-bottom: 16px;">Find Your Perfect Shade Match</h2>
+      <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 28px; opacity: 0.9;">Take our 60-second shade quiz to discover your exact undertone and recommended foundation match.</p>
+      <a href="pages/products.html?category=Foundation" class="btn" style="background: #FFFFFF; color: var(--rose-gold-dark); font-weight: 700;">Find Your Perfect Match</a>
+    </div>
+  </section>
+
+  <!-- CUSTOMER REVIEWS & TESTIMONIALS -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <div class="eyebrow">Real Feedback</div>
+        <h2 class="section-title">What Our Clients Say</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+        <div class="product-card" style="padding: 30px;">
+          <div style="color: var(--champagne); font-size: 1.2rem; margin-bottom: 12px;">★★★★★</div>
+          <p style="font-style: italic; margin-bottom: 18px; color: var(--text-muted);">"The Velvet Rose Lipstick feels weightless and stays vibrant all day. Hands down the best lipstick I have ever owned!"</p>
+          <strong style="display:block;">— Sophia M.</strong>
+          <span style="font-size: 0.8rem; color: var(--rose-gold);">Verified Buyer</span>
+        </div>
+
+        <div class="product-card" style="padding: 30px;">
+          <div style="color: var(--champagne); font-size: 1.2rem; margin-bottom: 12px;">★★★★★</div>
+          <p style="font-style: italic; margin-bottom: 18px; color: var(--text-muted);">"Luminous Silk Foundation matched my warm tone effortlessly. It feels like real skin with a divine satin glow."</p>
+          <strong style="display:block;">— Elena R.</strong>
+          <span style="font-size: 0.8rem; color: var(--rose-gold);">Verified Buyer</span>
+        </div>
+
+        <div class="product-card" style="padding: 30px;">
+          <div style="color: var(--champagne); font-size: 1.2rem; margin-bottom: 12px;">★★★★★</div>
+          <p style="font-style: italic; margin-bottom: 18px; color: var(--text-muted);">"Fast delivery, gorgeous rose gold packaging, and clean botanical ingredients. ZYRA is my go-to brand."</p>
+          <strong style="display:block;">— Chloe T.</strong>
+          <span style="font-size: 0.8rem; color: var(--rose-gold);">Verified Buyer</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM GALLERY -->
+  <section style="padding: 40px 0;">
+    <div class="container text-center">
+      <div class="section-title-wrap">
+        <div class="eyebrow">#ZyraBeauty</div>
+        <h2 class="section-title">Follow Us On Instagram</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px;">
+        <img src="assets/products/lipstick_rose.jpg" style="border-radius: 16px; aspect-ratio:1; object-fit:cover;" alt="Instagram 1">
+        <img src="assets/products/foundation_silk.jpg" style="border-radius: 16px; aspect-ratio:1; object-fit:cover;" alt="Instagram 2">
+        <img src="assets/products/eyeshadow_palette.jpg" style="border-radius: 16px; aspect-ratio:1; object-fit:cover;" alt="Instagram 3">
+        <img src="assets/products/blush_peony.jpg" style="border-radius: 16px; aspect-ratio:1; object-fit:cover;" alt="Instagram 4">
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand-text-block">
+          <span class="brand-name">ZYRA</span>
+          <span class="brand-tagline">LUXURY COSMETICS</span>
+        </div>
+        <p>Prestige clean cosmetics formulated with botanical oils, rich mineral pigments, and feminine luxury aesthetics.</p>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/products.html">Products</a></li>
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="pages/founder.html">Founder Story</a></li>
+          <li><a href="pages/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Categories</h4>
+        <ul class="footer-links">
+          <li><a href="pages/products.html?category=Lipstick">Lipsticks</a></li>
+          <li><a href="pages/products.html?category=Foundation">Foundations</a></li>
+          <li><a href="pages/products.html?category=Blush">Blushes</a></li>
+          <li><a href="pages/products.html?category=Eyeshadow">Eyeshadows</a></li>
+          <li><a href="pages/products.html?category=Skincare">Skincare</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Join ZYRA Club</h4>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px;">Subscribe to receive 15% off your first luxury order and exclusive access to new launches.</p>
+        <div style="display:flex; gap: 8px;">
+          <input type="email" placeholder="Enter your email" style="padding: 10px 16px; border-radius: var(--radius-pill); border: 1px solid var(--border-color); flex:1; outline:none; background: var(--card-bg); color: var(--text-primary);">
+          <button class="btn btn-primary btn-sm" onclick="showToast('Subscribed to ZYRA Newsletter! ✨')">Join</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <p>&copy; 2026 ZYRA Cosmetics. All Rights Reserved. Designed for College Project Demonstration.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Fetch and populate bestsellers dynamically on home page
+    document.addEventListener('DOMContentLoaded', async () => {
+      const res = await API.getProducts('?bestseller=1');
+      if (res.success && res.products.length > 0) {
+        const grid = document.getElementById('featured-products-grid');
+        grid.innerHTML = res.products.slice(0, 4).map(p => `
+          <div class="product-card">
+            <div class="card-img-wrapper">
+              <span class="card-badge" style="background:var(--champagne);">BESTSELLER</span>
+              <button class="card-wishlist-btn" onclick="API.addToWishlist(${p.id}).then(() => showToast('Saved to Wishlist ❤️'))">❤️</button>
+              <a href="pages/product-details.html?id=${p.id}">
+                <img src="${fixImagePath(p.image)}" class="card-img" alt="${p.name}" onerror="this.src='${fixImagePath('assets/products/lipstick_rose.jpg')}'">
+              </a>
+            </div>
+            <div class="card-category">${p.category}</div>
+            <h3 class="card-title"><a href="pages/product-details.html?id=${p.id}">${p.name}</a></h3>
+            <div class="card-shade"><span>${p.shade}</span></div>
+            <div class="card-footer">
+              <span class="card-price">₹${parseFloat(p.price).toLocaleString('en-IN', { minimumFractionDigits: 2 })}</span>
+              <a href="pages/product-details.html?id=${p.id}" class="btn btn-primary btn-sm">View Details</a>
+            </div>
+          </div>
+        `).join('');
+      }
+    });
+  </script>
+</body>
+</html>

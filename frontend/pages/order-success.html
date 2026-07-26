@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation — ZYRA Luxury Cosmetics</title>
+  <meta name="description" content="Thank you for your purchase from ZYRA Luxury Cosmetics. Your order confirmation and invoice details.">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="icon" href="../assets/favicon-32x32.png" type="image/png">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header no-print">
+    <nav class="navbar">
+      <a href="../index.html" class="brand-logo-link">
+        <img src="../assets/logo.png" alt="ZYRA Logo" class="brand-logo-img">
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="founder.html" class="nav-link">Founder</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="action-icon-btn theme-toggle-btn" aria-label="Toggle Theme">🌙</button>
+        <a href="wishlist.html" class="action-icon-btn">❤️ <span class="badge-count wishlist-badge">0</span></a>
+        <a href="cart.html" class="action-icon-btn">🛒 <span class="badge-count cart-badge">0</span></a>
+        <a href="login.html" class="action-icon-btn user-action-btn">👤</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SUCCESS CONTAINER -->
+  <div class="container" style="padding: 60px 24px; max-width: 900px;">
+    
+    <div class="product-card no-print" style="padding: 48px; text-align: center; margin-bottom: 40px; background: var(--card-bg);">
+      <div style="font-size: 4rem; animation: pulse 1.5s infinite; margin-bottom: 16px;">✨ 🛍️ 🎉</div>
+      <h1 class="section-title" style="color: var(--rose-gold); margin-bottom: 8px;">Order Placed Successfully!</h1>
+      <p style="font-size: 1.1rem; color: var(--text-primary); max-width: 600px; margin: 0 auto 20px;">Thank you for indulging in ZYRA Luxury Cosmetics. Your order has been registered and is being prepared with botanical care.</p>
+      
+      <div style="display:inline-block; background: var(--bg-secondary); border: 1.5px solid var(--rose-gold); padding: 12px 28px; border-radius: var(--radius-pill); font-size: 1.2rem; font-weight: 700; color: var(--rose-gold-dark); margin-bottom: 24px;">
+        Order ID: <span id="success-order-id">ZYRA-2026-000000</span>
+      </div>
+
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="products.html" class="btn btn-primary">Continue Shopping 🛒</a>
+        <button onclick="window.print()" class="btn btn-outline">Download Invoice 📄</button>
+      </div>
+    </div>
+
+    <!-- INVOICE PRINTABLE AREA -->
+    <div id="invoice-print-area" class="product-card" style="padding: 40px; background: var(--card-bg);">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; border-bottom: 2px solid var(--border-color); padding-bottom: 24px; margin-bottom: 24px;">
+        <div>
+          <img src="../assets/logo.png" alt="ZYRA Logo" style="height:70px; margin-bottom:10px;">
+          <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.4;">
+            <strong>ZYRA Cosmetics India Flagship</strong><br>
+            Express Avenue Mall, Royapettah, Chennai, Tamil Nadu - 600002<br>
+            GSTIN: 33ABCDE1234F1Z5 • support@zyracosmetics.com
+          </p>
+        </div>
+        <div style="text-align:right;">
+          <h2 style="font-size:1.6rem; color:var(--rose-gold);">OFFICIAL INVOICE</h2>
+          <p style="font-size:0.9rem; font-weight:600; margin-top:4px;">Order ID: <span id="inv-order-id">ZYRA-2026-000000</span></p>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Date: <span id="inv-date">July 26, 2026</span></p>
+          <span style="display:inline-block; margin-top:6px; background:#E8F5E9; color:#2E7D32; font-size:0.75rem; font-weight:700; padding:4px 12px; border-radius:12px;">ORDER CONFIRMED</span>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:30px; margin-bottom:30px;">
+        <div>
+          <h4 style="color:var(--rose-gold); margin-bottom:8px;">Billed & Delivered To:</h4>
+          <p id="inv-customer-name" style="font-weight:600;">Customer Name</p>
+          <p id="inv-customer-phone" style="font-size:0.9rem; color:var(--text-muted);">+91 98765 43210</p>
+          <p id="inv-customer-email" style="font-size:0.9rem; color:var(--text-muted);">email@example.com</p>
+          <p id="inv-customer-address" style="font-size:0.9rem; color:var(--text-muted); margin-top:4px;">Address Line, City, State - Pincode</p>
+        </div>
+
+        <div>
+          <h4 style="color:var(--rose-gold); margin-bottom:8px;">Delivery Details:</h4>
+          <p style="font-size:0.9rem;"><strong>Estimated Delivery:</strong> <span id="inv-est-delivery" style="color:var(--rose-gold); font-weight:600;">3 - 5 Business Days</span></p>
+          <p style="font-size:0.9rem;"><strong>Payment Method:</strong> <span id="inv-payment-method">Cash on Delivery</span></p>
+          <p style="font-size:0.9rem;"><strong>Shipping Method:</strong> Express Insured Courier</p>
+        </div>
+      </div>
+
+      <table class="custom-table" style="margin-bottom:24px;">
+        <thead>
+          <tr>
+            <th>Item Details</th>
+            <th>Qty</th>
+            <th>Unit Price</th>
+            <th>Total Amount</th>
+          </tr>
+        </thead>
+        <tbody id="inv-items-body">
+          <!-- Populated dynamically via JS -->
+        </tbody>
+      </table>
+
+      <div style="display:flex; justify-content:flex-end;">
+        <div style="min-width: 280px;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+            <span>Subtotal:</span>
+            <span id="inv-subtotal">₹0.00</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+            <span>GST (18%):</span>
+            <span id="inv-tax">₹0.00</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:12px;">
+            <span>Shipping:</span>
+            <span id="inv-shipping">FREE</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; font-size:1.2rem; font-weight:700; border-top:2px solid var(--rose-gold); padding-top:10px; color:var(--rose-gold);">
+            <span>Grand Total:</span>
+            <span id="inv-total">₹0.00</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:40px; padding-top:20px; border-top:1px dashed var(--border-color); text-align:center; font-size:0.85rem; color:var(--text-muted);">
+        <p>Thank you for choosing ZYRA Cosmetics. Clean • Cruelty-Free • Botanical Elegance</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer no-print">
+    <div class="container footer-bottom text-center">
+      <p>&copy; 2026 ZYRA Cosmetics India. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const params = new URLSearchParams(window.location.search);
+      const orderId = params.get('orderId');
+
+      if (!orderId) {
+        window.location.href = 'products.html';
+        return;
+      }
+
+      const res = await API.getOrderById(orderId);
+      if (!res.success || !res.order) {
+        showToast('Order details not found.', 'error');
+        return;
+      }
+
+      const order = res.order;
+      document.getElementById('success-order-id').textContent = order.order_id;
+      document.getElementById('inv-order-id').textContent = order.order_id;
+      document.getElementById('inv-date').textContent = new Date(order.created_at || Date.now()).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
+      document.getElementById('inv-customer-name').textContent = order.customer_name;
+      document.getElementById('inv-customer-phone').textContent = `📞 ${order.phone}`;
+      document.getElementById('inv-customer-email').textContent = `✉️ ${order.email}`;
+      document.getElementById('inv-customer-address').textContent = `📍 ${order.address}, ${order.city}, ${order.state} - ${order.pincode}`;
+      document.getElementById('inv-payment-method').textContent = order.payment_method || 'Cash on Delivery';
+
+      // Estimated Delivery 4 days from now
+      const estDate = new Date();
+      estDate.setDate(estDate.getDate() + 4);
+      document.getElementById('inv-est-delivery').textContent = estDate.toLocaleDateString('en-IN', { weekday: 'short', month: 'short', day: 'numeric' });
+
+      // Render Order Items
+      const itemsBody = document.getElementById('inv-items-body');
+      if (order.items && order.items.length > 0) {
+        itemsBody.innerHTML = order.items.map(item => `
+          <tr>
+            <td>
+              <strong>${item.name || item.product_name}</strong>
+              <div style="font-size:0.75rem; color:var(--text-muted);">${item.shade || 'Standard Shade'}</div>
+            </td>
+            <td>${item.quantity}</td>
+            <td>₹${parseFloat(item.price).toFixed(2)}</td>
+            <td style="font-weight:600; color:var(--rose-gold);">₹${(parseFloat(item.price) * item.quantity).toFixed(2)}</td>
+          </tr>
+        `).join('');
+      }
+
+      document.getElementById('inv-subtotal').textContent = `₹${parseFloat(order.subtotal).toLocaleString('en-IN', { minimumFractionDigits: 2 })}`;
+      document.getElementById('inv-tax').textContent = `₹${parseFloat(order.tax).toLocaleString('en-IN', { minimumFractionDigits: 2 })}`;
+      document.getElementById('inv-shipping').textContent = parseFloat(order.shipping) === 0 ? 'FREE' : `₹${parseFloat(order.shipping).toFixed(2)}`;
+      document.getElementById('inv-total').textContent = `₹${parseFloat(order.grand_total).toLocaleString('en-IN', { minimumFractionDigits: 2 })}`;
+    });
+  </script>
+</body>
+</html>

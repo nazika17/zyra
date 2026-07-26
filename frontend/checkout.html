@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — ZYRA Luxury Cosmetics</title>
+  <meta name="description" content="Complete your purchase securely at ZYRA Luxury Cosmetics. Fast delivery across India.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="assets/favicon-32x32.png" type="image/png">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="brand-logo-link">
+        <img src="assets/logo.png" alt="ZYRA Logo" class="brand-logo-img">
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="pages/products.html" class="nav-link">Products</a></li>
+        <li><a href="pages/about.html" class="nav-link">About Us</a></li>
+        <li><a href="pages/founder.html" class="nav-link">Founder</a></li>
+        <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="action-icon-btn theme-toggle-btn" aria-label="Toggle Theme">🌙</button>
+        <a href="pages/wishlist.html" class="action-icon-btn">❤️ <span class="badge-count wishlist-badge">0</span></a>
+        <a href="pages/cart.html" class="action-icon-btn">🛒 <span class="badge-count cart-badge">0</span></a>
+        <a href="pages/login.html" class="action-icon-btn user-action-btn">👤</a>
+        <div class="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- CHECKOUT CONTENT -->
+  <div class="container" style="padding: 60px 24px;">
+    <div class="section-title-wrap" style="text-align: left; margin-bottom: 30px;">
+      <div class="eyebrow">Secure Order Processing</div>
+      <h1 class="section-title">Checkout</h1>
+    </div>
+
+    <form id="checkout-form">
+      <div style="display: grid; grid-template-columns: 1.8fr 1.2fr; gap: 40px;">
+
+        <!-- SHIPPING DETAILS FORM -->
+        <div class="product-card" style="padding: 36px; background: var(--card-bg);">
+          <h3 style="font-size: 1.3rem; margin-bottom: 24px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; color: var(--rose-gold);">1. Shipping & Delivery Address</h3>
+
+          <div style="margin-bottom: 16px;">
+            <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:6px;">Full Name *</label>
+            <input type="text" id="chk-name" required placeholder="Ananya Sharma" style="width:100%; padding:12px 16px; border-radius: var(--radius-pill); border: 1.5px solid var(--border-color); background:var(--bg-primary); color:var(--text-primary); outline:none;">
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom: 16px;">
+            <div>
+              <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:6px;">Phone Number (10 Digits) *</label>
+              <input type="tel" id="chk-phone" required placeholder="9876543210" style="width:100%; padding:12px 16px; border-radius: var(--radius-pill); border: 1.5px solid var(--border-color); background:var(--bg-primary); color:var(--text-primary); outline:none;">
+            </div>
+            <div>
+              <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:6px;">Email Address *</label>
+              <input type="email" id="chk-email" required placeholder="ananya@example.com" style="width:100%; padding:12px 16px; border-radius: var(--radius-pill); border: 1.5px solid var(--border-color); background:var(--bg-primary); color:var(--text-primary); outline:none;">
+            </div>
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:6px;">Street Address & House No. *</label>
+            <input type="text" id="chk-address" required placeholder="Flat 4B, Rosewood Apartments, Anna Nagar" style="width:100%; padding:12px 16px; border-radius: var(--radius-md); border: 1.5px solid var(--border-color); background:var(--bg-primary); color:var(--text-primary); outline:none;">
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-bottom: 24px;">
+            <div>
+              <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:6px;">City *</label>
+              <input type="text" id="chk-city" required placeholder="Chennai" style="width:100%; padding:12px 16px; border-radius: var(--radius-pill); border: 1.5px solid var(--border-color); background:var(--bg-primary); color:var(--text-primary); outline:none;">
+            </div>
+            <div>
+              <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:6px;">State *</label>
+              <input type="text" id="chk-state" required placeholder="Tamil Nadu" style="width:100%; padding:12px 16px; border-radius: var(--radius-pill); border: 1.5px solid var(--border-color); background:var(--bg-primary); color:var(--text-primary); outline:none;">
+            </div>
+            <div>
+              <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:6px;">Pincode (6 Digits) *</label>
+              <input type="text" id="chk-pincode" required placeholder="600040" maxlength="6" style="width:100%; padding:12px 16px; border-radius: var(--radius-pill); border: 1.5px solid var(--border-color); background:var(--bg-primary); color:var(--text-primary); outline:none;">
+            </div>
+          </div>
+
+          <h3 style="font-size: 1.3rem; margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; color: var(--rose-gold);">2. Select Payment Method</h3>
+
+          <div style="display:flex; flex-direction:column; gap:12px; margin-bottom: 24px;">
+            <label class="product-card" style="padding:16px; display:flex; align-items:center; gap:14px; cursor:pointer;">
+              <input type="radio" name="payment_method" value="Cash on Delivery" checked style="accent-color:var(--rose-gold);">
+              <div>
+                <strong>💵 Cash on Delivery (COD)</strong>
+                <p style="font-size:0.8rem; color:var(--text-muted); margin:0;">Pay with cash upon delivery at your doorstep.</p>
+              </div>
+            </label>
+
+            <label class="product-card" style="padding:16px; display:flex; align-items:center; gap:14px; cursor:pointer;">
+              <input type="radio" name="payment_method" value="UPI (GPay / PhonePe / Paytm)" style="accent-color:var(--rose-gold);">
+              <div>
+                <strong>📱 UPI (Google Pay / PhonePe / Paytm / BHIM)</strong>
+                <p style="font-size:0.8rem; color:var(--text-muted); margin:0;">Instant UPI payment link or QR code scan.</p>
+              </div>
+            </label>
+
+            <label class="product-card" style="padding:16px; display:flex; align-items:center; gap:14px; cursor:pointer;">
+              <input type="radio" name="payment_method" value="Credit / Debit Card" style="accent-color:var(--rose-gold);">
+              <div>
+                <strong>💳 Credit / Debit Card</strong>
+                <p style="font-size:0.8rem; color:var(--text-muted); margin:0;">Visa, MasterCard, RuPay, Amex accepted.</p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- ORDER SUMMARY SIDEBAR -->
+        <div>
+          <div class="product-card" style="padding: 28px; background: var(--card-bg); sticky; top: 100px;">
+            <h3 style="font-size: 1.3rem; margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px;">Order Summary</h3>
+
+            <div id="checkout-items-list" style="margin-bottom: 20px; max-height: 240px; overflow-y: auto;">
+              <!-- Items loaded from cart via JS -->
+            </div>
+
+            <div style="display:flex; justify-content:space-between; margin-bottom: 10px;">
+              <span style="color: var(--text-muted);">Subtotal</span>
+              <strong id="chk-subtotal">₹0.00</strong>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; margin-bottom: 10px;">
+              <span style="color: var(--text-muted);">GST Tax (18%)</span>
+              <strong id="chk-tax">₹0.00</strong>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; margin-bottom: 16px;">
+              <span style="color: var(--text-muted);">Express Delivery</span>
+              <strong id="chk-shipping">₹0.00</strong>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; font-size: 1.3rem; font-weight: 700; border-top: 1px dashed var(--border-color); padding-top: 16px; margin-bottom: 24px;">
+              <span>Grand Total</span>
+              <span id="chk-grandtotal" style="color: var(--rose-gold);">₹0.00</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;">Place Order Now ✨</button>
+          </div>
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-bottom text-center">
+      <p>&copy; 2026 ZYRA Cosmetics India. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    let checkoutItems = [];
+    let calcSubtotal = 0;
+    let calcTax = 0;
+    let calcShipping = 0;
+    let calcGrandTotal = 0;
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const res = await API.getCart();
+      checkoutItems = res.items || [];
+
+      if (checkoutItems.length === 0) {
+        showToast('Your shopping cart is empty.', 'error');
+        setTimeout(() => window.location.href = 'pages/products.html', 1500);
+        return;
+      }
+
+      const listElem = document.getElementById('checkout-items-list');
+      listElem.innerHTML = checkoutItems.map(item => {
+        const itemPrice = parseFloat(item.price || 1499);
+        const itemTotal = itemPrice * item.quantity;
+        calcSubtotal += itemTotal;
+        const imgPath = fixImagePath(item.image);
+
+        return `
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="${imgPath}" style="width:40px; height:40px; border-radius:6px; object-fit:cover;" alt="${item.name}" onerror="this.src='${fixImagePath('assets/products/lipstick_rose.jpg')}'">
+              <div>
+                <strong style="font-size:0.85rem; display:block;">${item.name}</strong>
+                <span style="font-size:0.75rem; color:var(--text-muted);">${item.quantity}x • ₹${itemPrice}</span>
+              </div>
+            </div>
+            <strong style="font-size:0.85rem;">₹${itemTotal.toFixed(2)}</strong>
+          </div>
+        `;
+      }).join('');
+
+      calcTax = calcSubtotal * 0.18;
+      calcShipping = calcSubtotal > 999 ? 0 : 99.00;
+      calcGrandTotal = calcSubtotal + calcTax + calcShipping;
+
+      document.getElementById('chk-subtotal').textContent = `₹${calcSubtotal.toLocaleString('en-IN', { minimumFractionDigits: 2 })}`;
+      document.getElementById('chk-tax').textContent = `₹${calcTax.toLocaleString('en-IN', { minimumFractionDigits: 2 })}`;
+      document.getElementById('chk-shipping').textContent = calcShipping === 0 ? 'FREE' : `₹${calcShipping.toFixed(2)}`;
+      document.getElementById('chk-grandtotal').textContent = `₹${calcGrandTotal.toLocaleString('en-IN', { minimumFractionDigits: 2 })}`;
+    });
+
+    document.getElementById('checkout-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('chk-name').value.trim();
+      const phone = document.getElementById('chk-phone').value.trim();
+      const email = document.getElementById('chk-email').value.trim();
+      const address = document.getElementById('chk-address').value.trim();
+      const city = document.getElementById('chk-city').value.trim();
+      const state = document.getElementById('chk-state').value.trim();
+      const pincode = document.getElementById('chk-pincode').value.trim();
+      const payment_method = document.querySelector('input[name="payment_method"]:checked')?.value || 'Cash on Delivery';
+
+      if (!name || !email || !phone || !address || !city || !state || !pincode) {
+        showToast('Please fill out all required fields.', 'error');
+        return;
+      }
+
+      const res = await API.createOrder({
+        customer_name: name,
+        phone,
+        email,
+        address,
+        city,
+        state,
+        pincode,
+        payment_method,
+        items: checkoutItems,
+        subtotal: calcSubtotal,
+        tax: calcTax,
+        shipping: calcShipping,
+        grand_total: calcGrandTotal
+      });
+
+      if (res.success) {
+        showToast(`Order Placed Successfully! Order ID: ${res.order_id}`);
+        setTimeout(() => {
+          window.location.href = `pages/order-success.html?orderId=${res.order_id}`;
+        }, 1200);
+      } else {
+        showToast(res.message || 'Could not place order.', 'error');
+      }
+    });
+  </script>
+</body>
+</html>

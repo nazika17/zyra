@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products Catalog — ZYRA Luxury Cosmetics</title>
+  <meta name="description" content="Explore ZYRA luxury cosmetics across 17 beauty categories including Lipsticks, Foundations, Blushes, Eyeshadows, and Botanical Skincare.">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="icon" href="../assets/favicon-32x32.png" type="image/png">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="../index.html" class="brand-logo-link">
+        <img src="../assets/logo.png" alt="ZYRA Logo" class="brand-logo-img">
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link active">Products</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="founder.html" class="nav-link">Founder</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="action-icon-btn theme-toggle-btn" aria-label="Toggle Theme">🌙</button>
+        <a href="wishlist.html" class="action-icon-btn" aria-label="Wishlist">
+          ❤️ <span class="badge-count wishlist-badge">0</span>
+        </a>
+        <a href="cart.html" class="action-icon-btn" aria-label="Cart">
+          🛒 <span class="badge-count cart-badge">0</span>
+        </a>
+        <a href="login.html" class="action-icon-btn user-action-btn" aria-label="Login / Account">
+          👤
+        </a>
+        <div class="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section style="padding: 40px 0 20px; background: var(--bg-secondary);">
+    <div class="container text-center">
+      <div class="eyebrow">Luxury Catalog</div>
+      <h1 class="section-title">Cosmetics & Skincare</h1>
+      <p class="section-subtitle">Discover high-performance pigments, luminous finishes, and clean formulations.</p>
+
+      <!-- LIVE SEARCH BAR -->
+      <div class="search-input-wrap" style="max-width: 500px; margin: 24px auto 0;">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="catalog-search" class="search-input" placeholder="Search product name, shade, or category...">
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES HORIZONTAL FILTER PILLS -->
+  <section style="padding: 20px 0; border-bottom: 1px solid var(--border-color); background: var(--card-bg);">
+    <div class="container" style="overflow-x: auto; white-space: nowrap; padding-bottom: 6px;">
+      <button class="btn btn-ghost btn-sm cat-pill-btn active" data-category="All">All Categories</button>
+      <button class="btn btn-ghost btn-sm cat-pill-btn" data-category="Lipstick">Lipstick</button>
+      <button class="btn btn-ghost btn-sm cat-pill-btn" data-category="Foundation">Foundation</button>
+      <button class="btn btn-ghost btn-sm cat-pill-btn" data-category="Concealer">Concealer</button>
+      <button class="btn btn-ghost btn-sm cat-pill-btn" data-category="Compact Powder">Compact Powder</button>
+      <button class="btn btn-ghost btn-sm cat-pill-btn" data-category="Blush">Blush</button>
+      <button class="btn btn-ghost btn-sm cat-pill-btn" data-category="Primer">Primer</button>
+      <button class="btn btn-ghost btn-sm cat-pill-btn" data-category="Highlighter">Highlighter</button>
+      <button class="btn btn-ghost btn-sm cat-pill-btn" data-category="Mascara">Mascara</button>
+      <button class="btn btn-ghost btn-sm cat-pill-btn" data-category="Eyeliner">Eyeliner</button>
+      <button class="btn btn-ghost btn-sm cat-pill-btn" data-category="Kajal">Kajal</button>
+      <button class="btn btn-ghost btn-sm cat-pill-btn" data-category="Eyeshadow">Eyeshadow</button>
+      <button class="btn btn-ghost btn-sm cat-pill-btn" data-category="Lip Gloss">Lip Gloss</button>
+      <button class="btn btn-ghost btn-sm cat-pill-btn" data-category="Lip Liner">Lip Liner</button>
+      <button class="btn btn-ghost btn-sm cat-pill-btn" data-category="Setting Spray">Setting Spray</button>
+      <button class="btn btn-ghost btn-sm cat-pill-btn" data-category="Makeup Brushes">Makeup Brushes</button>
+      <button class="btn btn-ghost btn-sm cat-pill-btn" data-category="Skincare">Skincare</button>
+    </div>
+  </section>
+
+  <!-- MAIN CATALOG & SIDEBAR FILTER LAYOUT -->
+  <div class="container">
+    <div class="filter-layout">
+
+      <!-- SIDEBAR FILTERS -->
+      <aside class="filter-sidebar">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px;">
+          <h3 style="font-size: 1.1rem; margin: 0;">Filters</h3>
+          <button class="btn btn-ghost btn-sm" onclick="resetFilters()">Clear All</button>
+        </div>
+
+        <!-- Price Range Slider -->
+        <div class="filter-group">
+          <div class="filter-group-title">Max Price (<span id="price-slider-val">₹2000</span>)</div>
+          <input type="range" id="price-slider" min="150" max="2000" step="50" value="2000" style="width: 100%; accent-color: var(--rose-gold);">
+        </div>
+
+        <!-- Availability Filter -->
+        <div class="filter-group">
+          <div class="filter-group-title">Availability</div>
+          <div class="filter-list">
+            <label class="filter-item"><input type="checkbox" id="filter-instock"> In Stock Only</label>
+          </div>
+        </div>
+
+        <!-- Finish Filter -->
+        <div class="filter-group">
+          <div class="filter-group-title">Finish</div>
+          <div class="filter-list">
+            <label class="filter-item"><input type="radio" name="finish-radio" value="All" checked onclick="currentFilters.finish='All'; loadProducts();"> All Finishes</label>
+            <label class="filter-item"><input type="radio" name="finish-radio" value="Matte" onclick="currentFilters.finish='Matte'; loadProducts();"> Velvet Matte</label>
+            <label class="filter-item"><input type="radio" name="finish-radio" value="Dewy" onclick="currentFilters.finish='Dewy'; loadProducts();"> Luminous Dewy</label>
+            <label class="filter-item"><input type="radio" name="finish-radio" value="Satin" onclick="currentFilters.finish='Satin'; loadProducts();"> Silky Satin</label>
+            <label class="filter-item"><input type="radio" name="finish-radio" value="Glossy" onclick="currentFilters.finish='Glossy'; loadProducts();"> Glass Glossy</label>
+          </div>
+        </div>
+
+        <!-- Skin Type Filter -->
+        <div class="filter-group">
+          <div class="filter-group-title">Skin Type</div>
+          <div class="filter-list">
+            <label class="filter-item"><input type="radio" name="skin_type" value="All" checked> All Skin Types</label>
+            <label class="filter-item"><input type="radio" name="skin_type" value="Dry & Normal"> Dry & Normal</label>
+            <label class="filter-item"><input type="radio" name="skin_type" value="Oily & Combination"> Oily & Combination</label>
+            <label class="filter-item"><input type="radio" name="skin_type" value="Sensitive Eyes"> Sensitive Eyes / Skin</label>
+          </div>
+        </div>
+      </aside>
+
+      <!-- PRODUCTS CONTENT AREA -->
+      <main>
+        <!-- TOP CONTROL BAR (COUNT & SORT) -->
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 24px;">
+          <div style="color: var(--text-muted); font-size: 0.9rem;">Showing items from ZYRA Collection</div>
+
+          <div style="display:flex; align-items:center; gap: 10px;">
+            <label for="catalog-sort" style="font-size: 0.85rem; font-weight: 600;">Sort By:</label>
+            <select id="catalog-sort" style="padding: 8px 16px; border-radius: var(--radius-pill); border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-primary); outline: none;">
+              <option value="newest">Newest Arrivals</option>
+              <option value="popularity">Popularity & Reviews</option>
+              <option value="price_asc">Price: Low to High</option>
+              <option value="price_desc">Price: High to Low</option>
+              <option value="rating">Highest Rated</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- DYNAMIC PRODUCTS GRID -->
+        <div class="products-grid" id="products-grid-container">
+          <!-- Loaded dynamically via products.js REST API call -->
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-bottom text-center">
+      <p>&copy; 2026 ZYRA Cosmetics India. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/products.js"></script>
+</body>
+</html>

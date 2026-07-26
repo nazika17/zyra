@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details — ZYRA Luxury Cosmetics</title>
+  <meta name="description" content="Explore luxury formula, ingredients, customer reviews, and shade swatches at ZYRA Cosmetics.">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="icon" href="../assets/favicon-32x32.png" type="image/png">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="../index.html" class="brand-logo-link">
+        <img src="../assets/logo.png" alt="ZYRA Logo" class="brand-logo-img">
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link active">Products</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="founder.html" class="nav-link">Founder</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="action-icon-btn theme-toggle-btn" aria-label="Toggle Theme">🌙</button>
+        <a href="wishlist.html" class="action-icon-btn">❤️ <span class="badge-count wishlist-badge">0</span></a>
+        <a href="cart.html" class="action-icon-btn">🛒 <span class="badge-count cart-badge">0</span></a>
+        <a href="login.html" class="action-icon-btn user-action-btn">👤</a>
+        <div class="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PRODUCT DETAILS CONTAINER -->
+  <div class="container" style="padding: 40px 24px;">
+
+    <!-- BREADCRUMB -->
+    <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px;">
+      <a href="../index.html">Home</a> / <a href="products.html">Products</a> / <span id="details-category" style="color: var(--rose-gold); font-weight: 600;">Category</span>
+    </div>
+
+    <div class="product-details-grid">
+      <!-- GALLERY WITH ZOOM -->
+      <div class="details-gallery">
+        <div class="zoom-container">
+          <img src="../assets/products/lipstick_rose.jpg" id="details-main-img" class="details-main-img" alt="Product Main Image">
+        </div>
+
+        <div class="thumbnail-grid" id="thumbnail-grid">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+
+      <!-- PRODUCT INFO -->
+      <div>
+        <h1 class="details-title" id="details-title">Loading Product...</h1>
+        <div style="display:flex; align-items:center; gap: 12px; margin-bottom: 16px;">
+          <span id="details-rating" style="color: var(--champagne); font-weight: 600; font-size: 1.05rem;">★ 4.9 (32 Reviews)</span>
+          <span id="details-stock" style="font-size: 0.85rem; font-weight: 600; background: var(--bg-secondary); padding: 4px 12px; border-radius: var(--radius-pill);">In Stock</span>
+        </div>
+
+        <div class="details-price" id="details-price">₹0.00</div>
+
+        <p id="details-desc" style="color: var(--text-muted); font-size: 1rem; margin-bottom: 24px;">Loading formulation details...</p>
+
+        <!-- SHADE SELECTOR -->
+        <div class="shade-picker-wrap">
+          <label style="font-size: 0.9rem; font-weight: 600; display:block;">Selected Shade: <span id="details-shade-name" style="color: var(--rose-gold);">Rose Petal</span></label>
+          <div class="shade-swatches">
+            <button class="swatch-btn active" style="background:#C87D87;" title="Rose Petal"></button>
+            <button class="swatch-btn" style="background:#A81C28;" title="Crimson Red"></button>
+            <button class="swatch-btn" style="background:#FF9E80;" title="Peach Nude"></button>
+          </div>
+        </div>
+
+        <!-- QUANTITY PICKER -->
+        <div style="margin: 24px 0; display:flex; align-items:center; gap: 16px;">
+          <label style="font-size: 0.9rem; font-weight: 600;">Quantity:</label>
+          <div class="qty-control">
+            <button class="qty-btn" onclick="updateQty(-1)">-</button>
+            <span class="qty-num" id="details-qty-val">1</span>
+            <button class="qty-btn" onclick="updateQty(1)">+</button>
+          </div>
+        </div>
+
+        <!-- ACTION BUTTONS -->
+        <div style="display:flex; gap: 16px; flex-wrap: wrap; margin-top: 30px;">
+          <button class="btn btn-primary" id="details-add-cart-btn" style="flex: 2;">🛒 Add to Cart</button>
+          <button class="btn btn-outline" id="details-buy-now-btn" style="flex: 1;">⚡ Buy Now</button>
+          <button class="action-icon-btn" id="details-wishlist-btn" title="Add to Wishlist" style="width: 50px; height: 50px;">❤️</button>
+        </div>
+
+        <!-- SPECIFICATION DETAILS ACCORDION / BOX -->
+        <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border-color); display:flex; flex-direction:column; gap:18px;">
+          <div>
+            <h3 style="font-size: 1.05rem; color:var(--rose-gold); margin-bottom: 4px;">✨ Key Benefits</h3>
+            <p id="details-benefits" style="font-size: 0.88rem; color: var(--text-muted);">12-Hour Hydrating Hold, Non-Drying Silk Cushion, Zero Feathering.</p>
+          </div>
+
+          <div>
+            <h3 style="font-size: 1.05rem; color:var(--rose-gold); margin-bottom: 4px;">🌱 Ingredients</h3>
+            <p id="details-ingredients" style="font-size: 0.88rem; color: var(--text-muted);">Dimethicone, Rosa Canina Fruit Oil, Hyaluronic Acid, Tocopherol.</p>
+          </div>
+
+          <div>
+            <h3 style="font-size: 1.05rem; color:var(--rose-gold); margin-bottom: 4px;">💄 How To Use</h3>
+            <p id="details-howtouse" style="font-size: 0.88rem; color: var(--text-muted);">Apply directly from bullet starting at center of lips outwards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CUSTOMER REVIEWS SECTION -->
+    <section style="margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--border-color);">
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 50px;">
+        
+        <!-- REVIEWS DISPLAY LIST -->
+        <div>
+          <div class="section-title-wrap" style="text-align:left; margin-bottom: 24px;">
+            <div class="eyebrow">Real Feedback</div>
+            <h2 class="section-title" style="font-size:1.8rem;">Customer Reviews</h2>
+          </div>
+          <div id="reviews-list-container">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+
+        <!-- SUBMIT REVIEW FORM -->
+        <div class="product-card" style="padding: 30px; background:var(--card-bg); height:fit-content;">
+          <h3 style="font-size: 1.2rem; margin-bottom: 16px;">Write a Customer Review</h3>
+          
+          <form id="submit-review-form">
+            <div style="margin-bottom: 16px;">
+              <label style="font-size: 0.85rem; font-weight: 600; display:block; margin-bottom: 6px;">Your Rating *</label>
+              <div class="star-rating-input" id="star-rating-picker">
+                <span class="active">★</span>
+                <span class="active">★</span>
+                <span class="active">★</span>
+                <span class="active">★</span>
+                <span class="active">★</span>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <label style="font-size: 0.85rem; font-weight: 600; display:block; margin-bottom: 6px;">Your Name *</label>
+              <input type="text" id="review-name" required placeholder="Elena Rostova" style="width:100%; padding:10px 14px; border-radius:var(--radius-pill); border:1.5px solid var(--border-color); background:var(--bg-primary); color:var(--text-primary); outline:none;">
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <label style="font-size: 0.85rem; font-weight: 600; display:block; margin-bottom: 6px;">Email Address</label>
+              <input type="email" id="review-email" placeholder="elena@example.com" style="width:100%; padding:10px 14px; border-radius:var(--radius-pill); border:1.5px solid var(--border-color); background:var(--bg-primary); color:var(--text-primary); outline:none;">
+            </div>
+
+            <div style="margin-bottom: 20px;">
+              <label style="font-size: 0.85rem; font-weight: 600; display:block; margin-bottom: 6px;">Your Review *</label>
+              <textarea id="review-comment" required rows="4" placeholder="Share your experience with texture, stay power, and finish..." style="width:100%; padding:12px 14px; border-radius:var(--radius-md); border:1.5px solid var(--border-color); background:var(--bg-primary); color:var(--text-primary); outline:none; font-family:inherit;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;">Submit Review ✨</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RELATED PRODUCTS -->
+    <section style="margin-top: 80px;">
+      <div class="section-title-wrap">
+        <div class="eyebrow">Complementary Beauty</div>
+        <h2 class="section-title">You May Also Love</h2>
+      </div>
+      <div class="products-grid" id="related-products-grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-bottom text-center">
+      <p>&copy; 2026 ZYRA Cosmetics. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/product-details.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishlist — ZYRA Luxury Cosmetics</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="assets/favicon-32x32.png" type="image/png">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="brand-logo-link">
+        <img src="assets/logo.png" alt="ZYRA Logo" class="brand-logo-img">
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="pages/products.html" class="nav-link">Products</a></li>
+        <li><a href="pages/about.html" class="nav-link">About Us</a></li>
+        <li><a href="pages/founder.html" class="nav-link">Founder</a></li>
+        <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="action-icon-btn theme-toggle-btn" aria-label="Toggle Theme">🌙</button>
+
+        <a href="pages/wishlist.html" class="action-icon-btn" aria-label="Wishlist">
+          ❤️ <span class="badge-count wishlist-badge">0</span>
+        </a>
+
+        <a href="pages/cart.html" class="action-icon-btn" aria-label="Cart">
+          🛒 <span class="badge-count cart-badge">0</span>
+        </a>
+
+        <a href="pages/login.html" class="action-icon-btn user-action-btn" aria-label="Login / Account">
+          👤
+        </a>
+
+        <div class="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- WISHLIST CONTENT -->
+  <div class="container" style="padding: 50px 24px;">
+    <div class="section-title-wrap" style="text-align: left; margin-bottom: 30px;">
+      <div class="eyebrow">Saved Treasures</div>
+      <h1 class="section-title">Your Wishlist</h1>
+    </div>
+
+    <div class="products-grid" id="wishlist-grid-container">
+      <!-- Loaded dynamically via wishlist.js -->
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-bottom text-center">
+      <p>&copy; 2026 ZYRA Cosmetics India. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/wishlist.js"></script>
+</body>
+</html>
