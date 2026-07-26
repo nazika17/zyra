@@ -2,7 +2,8 @@
    0. UNIVERSAL RELATIVE IMAGE PATH RESOLVER
    -------------------------------------------------------------------------- */
 function fixImagePath(imgPath) {
-  const isSubfolder = window.location.pathname.includes('/pages/');
+  const cleanPath = (window.location.pathname || '').toLowerCase().replace(/\\/g, '/');
+  const isSubfolder = cleanPath.includes('/pages/');
   const defaultImg = isSubfolder ? '../assets/products/lipstick_rose.jpg' : 'assets/products/lipstick_rose.jpg';
 
   if (!imgPath) return defaultImg;
